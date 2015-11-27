@@ -1,0 +1,54 @@
+*** This server is started afresh after all of server1, server2 and server3 have crashed, so this server knows nothing of what any results they got or knew. So this server acts like a fresh new movie system. ***
+
+Mar 06, 2015 9:56:07 AM wfjv99.moviesys.server.Server <init>
+INFO: Instantiating new server...
+
+*** Previously the client set tt1231231 to abcdef, but this server knows nothing of that as all of server1 server2 and server3 died ***
+Mar 06, 2015 9:56:12 AM wfjv99.moviesys.server.Server get
+INFO: Received get request for tt1231231
+Mar 06, 2015 9:56:12 AM wfjv99.moviesys.server.OMDB get
+INFO: Received request to fetch info about tt1231231
+Mar 06, 2015 9:56:23 AM wfjv99.moviesys.server.Server set
+INFO: Received set request for tt1231231 -- <?xml version="1.0" encoding="UTF-8"?><root response="True"><movie title="Episode dated 24 December 1950" year="1950" rated="N/A" released="N/A" runtime="N/A" genre="Comedy, Family, Game-Show" director="Franklin Heller" writer="N/A" actors="John Daly, Betty Furness, Louis Untermeyer, Arlene Francis" plot="The panel tries to guess the lines of a shepherd, a pretzel bender and a diamond cutter, as well as the identity of mystery challenger Santa Claus." language="N/A" country="N/A" awards="N/A" poster="N/A" metascore="N/A" imdbRating="N/A" imdbVotes="N/A" imdbID="tt1231231" type="episode"/></root>
+Mar 06, 2015 9:56:23 AM wfjv99.moviesys.server.Server set
+INFO: Recorded tt1231231 -- <?xml version="1.0" encoding="UTF-8"?><root response="True"><movie title="Episode dated 24 December 1950" year="1950" rated="N/A" released="N/A" runtime="N/A" genre="Comedy, Family, Game-Show" director="Franklin Heller" writer="N/A" actors="John Daly, Betty Furness, Louis Untermeyer, Arlene Francis" plot="The panel tries to guess the lines of a shepherd, a pretzel bender and a diamond cutter, as well as the identity of mystery challenger Santa Claus." language="N/A" country="N/A" awards="N/A" poster="N/A" metascore="N/A" imdbRating="N/A" imdbVotes="N/A" imdbID="tt1231231" type="episode"/></root> locally.
+Mar 06, 2015 9:56:23 AM wfjv99.moviesys.server.Server get
+INFO: Remote result for tt1231231: <?xml version="1.0" encoding="UTF-8"?><root response="True"><movie title="Episode dated 24 December 1950" year="1950" rated="N/A" released="N/A" runtime="N/A" genre="Comedy, Family, Game-Show" director="Franklin Heller" writer="N/A" actors="John Daly, Betty Furness, Louis Untermeyer, Arlene Francis" plot="The panel tries to guess the lines of a shepherd, a pretzel bender and a diamond cutter, as well as the identity of mystery challenger Santa Claus." language="N/A" country="N/A" awards="N/A" poster="N/A" metascore="N/A" imdbRating="N/A" imdbVotes="N/A" imdbID="tt1231231" type="episode"/></root>
+Mar 06, 2015 9:56:23 AM wfjv99.moviesys.server.Server set
+INFO: Received set request for tt1231231 -- <?xml version="1.0" encoding="UTF-8"?><root response="True"><movie title="Episode dated 24 December 1950" year="1950" rated="N/A" released="N/A" runtime="N/A" genre="Comedy, Family, Game-Show" director="Franklin Heller" writer="N/A" actors="John Daly, Betty Furness, Louis Untermeyer, Arlene Francis" plot="The panel tries to guess the lines of a shepherd, a pretzel bender and a diamond cutter, as well as the identity of mystery challenger Santa Claus." language="N/A" country="N/A" awards="N/A" poster="N/A" metascore="N/A" imdbRating="N/A" imdbVotes="N/A" imdbID="tt1231231" type="episode"/></root>
+Mar 06, 2015 9:56:23 AM wfjv99.moviesys.server.Server set
+WARNING: Overwriting local knowledge for tt1231231
+Mar 06, 2015 9:56:23 AM wfjv99.moviesys.server.Server set
+INFO: Recorded tt1231231 -- <?xml version="1.0" encoding="UTF-8"?><root response="True"><movie title="Episode dated 24 December 1950" year="1950" rated="N/A" released="N/A" runtime="N/A" genre="Comedy, Family, Game-Show" director="Franklin Heller" writer="N/A" actors="John Daly, Betty Furness, Louis Untermeyer, Arlene Francis" plot="The panel tries to guess the lines of a shepherd, a pretzel bender and a diamond cutter, as well as the identity of mystery challenger Santa Claus." language="N/A" country="N/A" awards="N/A" poster="N/A" metascore="N/A" imdbRating="N/A" imdbVotes="N/A" imdbID="tt1231231" type="episode"/></root> locally.
+Mar 06, 2015 9:56:23 AM wfjv99.moviesys.server.Server get
+INFO: Result propagated to other servers.
+Mar 06, 2015 9:56:23 AM wfjv99.moviesys.server.Server set
+INFO: Received set request for tt1231231 -- <?xml version="1.0" encoding="UTF-8"?><root response="True"><movie title="Episode dated 24 December 1950" year="1950" rated="N/A" released="N/A" runtime="N/A" genre="Comedy, Family, Game-Show" director="Franklin Heller" writer="N/A" actors="John Daly, Betty Furness, Louis Untermeyer, Arlene Francis" plot="The panel tries to guess the lines of a shepherd, a pretzel bender and a diamond cutter, as well as the identity of mystery challenger Santa Claus." language="N/A" country="N/A" awards="N/A" poster="N/A" metascore="N/A" imdbRating="N/A" imdbVotes="N/A" imdbID="tt1231231" type="episode"/></root>
+Mar 06, 2015 9:56:23 AM wfjv99.moviesys.server.Server set
+WARNING: Overwriting local knowledge for tt1231231
+Mar 06, 2015 9:56:23 AM wfjv99.moviesys.server.Server set
+INFO: Recorded tt1231231 -- <?xml version="1.0" encoding="UTF-8"?><root response="True"><movie title="Episode dated 24 December 1950" year="1950" rated="N/A" released="N/A" runtime="N/A" genre="Comedy, Family, Game-Show" director="Franklin Heller" writer="N/A" actors="John Daly, Betty Furness, Louis Untermeyer, Arlene Francis" plot="The panel tries to guess the lines of a shepherd, a pretzel bender and a diamond cutter, as well as the identity of mystery challenger Santa Claus." language="N/A" country="N/A" awards="N/A" poster="N/A" metascore="N/A" imdbRating="N/A" imdbVotes="N/A" imdbID="tt1231231" type="episode"/></root> locally.
+Mar 06, 2015 9:56:41 AM wfjv99.moviesys.server.Server get
+INFO: Received get request for xyz
+Mar 06, 2015 9:56:41 AM wfjv99.moviesys.server.OMDB get
+INFO: Received request to fetch info about xyz
+Mar 06, 2015 9:56:42 AM wfjv99.moviesys.server.Server set
+INFO: Received set request for xyz -- <root response="False"><error>Incorrect IMDb ID</error></root>
+Mar 06, 2015 9:56:42 AM wfjv99.moviesys.server.Server set
+INFO: Recorded xyz -- <root response="False"><error>Incorrect IMDb ID</error></root> locally.
+Mar 06, 2015 9:56:42 AM wfjv99.moviesys.server.Server get
+INFO: Remote result for xyz: <root response="False"><error>Incorrect IMDb ID</error></root>
+Mar 06, 2015 9:56:42 AM wfjv99.moviesys.server.Server set
+INFO: Received set request for xyz -- <root response="False"><error>Incorrect IMDb ID</error></root>
+Mar 06, 2015 9:56:42 AM wfjv99.moviesys.server.Server set
+WARNING: Overwriting local knowledge for xyz
+Mar 06, 2015 9:56:42 AM wfjv99.moviesys.server.Server set
+INFO: Recorded xyz -- <root response="False"><error>Incorrect IMDb ID</error></root> locally.
+Mar 06, 2015 9:56:42 AM wfjv99.moviesys.server.Server get
+INFO: Result propagated to other servers.
+Mar 06, 2015 9:56:42 AM wfjv99.moviesys.server.Server set
+INFO: Received set request for xyz -- <root response="False"><error>Incorrect IMDb ID</error></root>
+Mar 06, 2015 9:56:42 AM wfjv99.moviesys.server.Server set
+WARNING: Overwriting local knowledge for xyz
+Mar 06, 2015 9:56:42 AM wfjv99.moviesys.server.Server set
+INFO: Recorded xyz -- <root response="False"><error>Incorrect IMDb ID</error></root> locally.

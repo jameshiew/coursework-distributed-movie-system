@@ -1,0 +1,56 @@
+*** This initial query results in a remote call by the system to OMDB ***
+
+> get tt1231231
+<?xml version="1.0" encoding="UTF-8"?><root response="True"><movie title="Episode dated 24 December 1950" year="1950" rated="N/A" released="N/A" runtime="N/A" genre="Comedy, Family, Game-Show" director="Franklin Heller" writer="N/A" actors="John Daly, Betty Furness, Louis Untermeyer, Arlene Francis" plot="The panel tries to guess the lines of a shepherd, a pretzel bender and a diamond cutter, as well as the identity of mystery challenger Santa Claus." language="N/A" country="N/A" awards="N/A" poster="N/A" metascore="N/A" imdbRating="N/A" imdbVotes="N/A" imdbID="tt1231231" type="episode"/></root>
+
+*** The OMDB query was cached so this repeat of the first query does not require the system to contact OMDB again ***
+
+> get tt1231231
+<?xml version="1.0" encoding="UTF-8"?><root response="True"><movie title="Episode dated 24 December 1950" year="1950" rated="N/A" released="N/A" runtime="N/A" genre="Comedy, Family, Game-Show" director="Franklin Heller" writer="N/A" actors="John Daly, Betty Furness, Louis Untermeyer, Arlene Francis" plot="The panel tries to guess the lines of a shepherd, a pretzel bender and a diamond cutter, as well as the identity of mystery challenger Santa Claus." language="N/A" country="N/A" awards="N/A" poster="N/A" metascore="N/A" imdbRating="N/A" imdbVotes="N/A" imdbID="tt1231231" type="episode"/></root>
+
+*** Updating the system with a new key-value pair and retrieving it (also overwriting the cached tt1231231 result ***
+
+> set tt1231231 abcdef
+> get tt1231231
+abcdef
+
+*** Requesting an invalid id ***
+
+> get invalid_id
+<root response="False"><error>Incorrect IMDb ID</error></root>
+
+*** A new key value pair is added to the system ***
+
+> set xyz 123
+
+*** There is a pause here while server1 propagates the change to server2 and server3, then server1 is shut down; then when the "get xyz" request is sent there is no primary available and the client is notified of this ***
+
+> get xyz
+Message from server: RemoteException occurred in server thread; nested exception is: 
+	java.rmi.ServerException: There is currently no primary available. Please try again later.
+
+*** After a while, the "get xyz" request is tried again, a new primary has been assigned and it had the change from before propagated to it ***
+
+> get xyz
+123
+> get tt1231231
+abcdef
+> get tt1231231
+abcdef
+
+*** Now both server2 and server3 are shut down, resulting in there being no backend servers ***
+
+> get tt1231231
+Message from server: RemoteException occurred in server thread; nested exception is: 
+	java.rmi.ServerException: There is currently no primary available. Please try again later.
+> get tt1231231
+Message from server: RemoteException occurred in server thread; nested exception is: 
+	java.rmi.ServerException: There is currently no primary available. Please try again later.
+
+*** server4 is started up, but it has no memory of previous client requests, so when 'tt1231231' and 'xyz' are requested it returns new results ***
+
+> get tt1231231
+<?xml version="1.0" encoding="UTF-8"?><root response="True"><movie title="Episode dated 24 December 1950" year="1950" rated="N/A" released="N/A" runtime="N/A" genre="Comedy, Family, Game-Show" director="Franklin Heller" writer="N/A" actors="John Daly, Betty Furness, Louis Untermeyer, Arlene Francis" plot="The panel tries to guess the lines of a shepherd, a pretzel bender and a diamond cutter, as well as the identity of mystery challenger Santa Claus." language="N/A" country="N/A" awards="N/A" poster="N/A" metascore="N/A" imdbRating="N/A" imdbVotes="N/A" imdbID="tt1231231" type="episode"/></root>
+> get xyz
+<root response="False"><error>Incorrect IMDb ID</error></root>
+> ^C
