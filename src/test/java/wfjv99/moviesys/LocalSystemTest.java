@@ -1,3 +1,5 @@
+package wfjv99.moviesys;
+
 import wfjv99.moviesys.frontend.Directory;
 import wfjv99.moviesys.frontend.ConcurrentDirectory;
 import wfjv99.moviesys.frontend.Frontend;

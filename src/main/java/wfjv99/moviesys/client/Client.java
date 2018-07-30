@@ -1,13 +1,11 @@
 package wfjv99.moviesys.client;
 
-import wfjv99.moviesys.NoBackendServerAvailableException;
 import wfjv99.util.RemoteSource;
 import wfjv99.util.RemoteStore;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.SocketTimeoutException;
 import java.rmi.*;
 import java.util.logging.Logger;
 

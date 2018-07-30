@@ -1,8 +1,6 @@
 package wfjv99.util.registry;
 
 import java.io.IOException;
-import java.rmi.Remote;
-import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 
 /**
